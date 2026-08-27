@@ -1,7 +1,7 @@
+/* ---------- Basic page setup ---------- */
+
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 html {
@@ -9,155 +9,196 @@ html {
 }
 
 body {
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #eef2f7;
-    color: #273142;
-    line-height: 1.6;
+    line-height: 1.7;
+    background: #f3f6fa;
+    color: #263238;
 }
 
-.course-container {
+
+/* ---------- Main page ---------- */
+
+body > * {
     max-width: 1100px;
-    margin: 30px auto;
-    background: white;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
-/* HEADER */
+/* ---------- Headings ---------- */
 
-.course-header {
-    background: #172554;
-    color: white;
-    padding: 50px 40px;
-    text-align: center;
-}
-
-.course-header h1 {
-    font-size: 2.5rem;
+h1 {
+    color: #17365d;
     margin-bottom: 8px;
 }
 
-.course-header p {
-    font-size: 1.1rem;
-    opacity: 0.85;
+h2 {
+    color: #1d4e89;
+    margin-top: 35px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #5b9bd5;
+}
+
+h3 {
+    color: #315f8c;
 }
 
 
-/* NAVIGATION */
+/* ---------- Links ---------- */
 
-.course-nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-
-    padding: 15px;
-    background: #1e3a8a;
-}
-
-.course-nav a {
-    color: white;
+a {
+    color: #1769aa;
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 6px;
+    font-weight: 500;
 }
 
-.course-nav a:hover {
-    background: #3b82f6;
-}
-
-
-/* CONTENT */
-
-main {
-    padding: 20px;
-}
-
-.course-section {
-    padding: 35px;
-    margin-bottom: 20px;
-}
-
-.course-section h2 {
-    color: #172554;
-    border-bottom: 3px solid #3b82f6;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.course-section a {
-    color: #2563eb;
-}
-
-.course-section a:hover {
-    text-decoration: none;
+a:hover {
+    color: #0b3d91;
+    text-decoration: underline;
 }
 
 
-/* COURSE CARDS */
+/* ---------- Navigation ---------- */
 
-.course-card {
-    background: #f8fafc;
-    border-left: 5px solid #3b82f6;
-
-    padding: 22px;
-    margin: 15px 0;
-
+nav {
+    background: #17365d;
+    padding: 14px 18px;
+    margin: 20px 0;
     border-radius: 8px;
-
-    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.course-card:hover {
-    transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+nav a {
+    color: white;
+    display: inline-block;
+    margin-right: 14px;
+    padding: 6px 10px;
+    border-radius: 5px;
 }
 
-.course-card h3 {
-    color: #1d4ed8;
+nav a:hover {
+    background: #2f75b5;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* ---------- Horizontal separators ---------- */
+
+hr {
+    border: 0;
+    border-top: 1px solid #d6dee8;
+    margin: 35px 0;
+}
+
+
+/* ---------- Lists ---------- */
+
+ul,
+ol {
+    padding-left: 28px;
+}
+
+li {
     margin-bottom: 8px;
 }
 
 
-/* LISTS */
+/* ---------- Tables ---------- */
 
-.course-section ul {
-    padding-left: 25px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 30px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
 }
 
-.course-section li {
-    margin: 10px 0;
+th {
+    background: #1d4e89;
+    color: white;
+    text-align: left;
+    padding: 12px;
+}
+
+td {
+    padding: 11px 12px;
+    border-bottom: 1px solid #dfe5ec;
+}
+
+tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
+tr:hover {
+    background: #e8f1fb;
 }
 
 
-/* FOOTER */
+/* ---------- Paragraphs ---------- */
+
+p {
+    margin: 12px 0;
+}
+
+
+/* ---------- Code / technical text ---------- */
+
+code {
+    background: #edf2f7;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+
+/* ---------- Block quotes ---------- */
+
+blockquote {
+    border-left: 4px solid #5b9bd5;
+    margin-left: 0;
+    padding: 10px 20px;
+    background: #f7f9fc;
+}
+
+
+/* ---------- Footer ---------- */
 
 footer {
-    text-align: center;
-    background: #172554;
-    color: white;
+    margin-top: 40px;
     padding: 25px;
+    background: #17365d;
+    color: white;
+    text-align: center;
 }
 
 
-/* MOBILE */
+/* ---------- Responsive design ---------- */
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
 
-    .course-container {
-        margin: 0;
+    body {
+        padding: 0 12px;
+        font-size: 15px;
     }
 
-    .course-header h1 {
+    h1 {
         font-size: 1.8rem;
     }
 
-    .course-section {
-        padding: 25px 15px;
+    nav {
+        text-align: center;
     }
 
-    .course-nav {
-        flex-direction: column;
-        text-align: center;
+    nav a {
+        display: block;
+        margin: 4px 0;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
