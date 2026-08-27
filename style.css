@@ -221,12 +221,12 @@ nav {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
 .gallery-item {
-    height: 180px;
+    height: 250px;
 
     background: #dbeafe;
 
@@ -235,15 +235,22 @@ nav {
     justify-content: center;
 
     border-radius: 12px;
-    color: #2563eb;
-    font-weight: bold;
+    overflow: hidden;
 
     transition: 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .gallery-item:hover {
     transform: scale(1.03);
 }
+
 
 .note {
     text-align: center;
